@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="cs" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Kartička zákazníka</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+</head>
+<body>
+<div class="container">
+    <div class="person-info">
+        <div class="photo-border"></div>
+        <img src="data:image/jpeg;base64,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" class="photo" alt="profilové foto"/>
+        <div class="row">
+            <span class="label" >Jméno</span>
+            <span class="value" th:text="${person.name}">Jan</span>
+        </div>
+        <div class="row">
+            <span class="label">Příjmení</span>
+            <span class="value" th:text="${person.surName}">Palach</span>
+        </div>
+        <div class="row">
+            <span class="label">Datum narození</span>
+            <span class="value" th:text="${person.birthDate}">11. 8. 1948</span>
+        </div>
+        <div class="row">
+            <span class="label">Věk</span>
+            <span class="value" th:text="${person.getAge}" >72</span>
+        </div>
+    </div>
+    <div class="address">
+        <div class="address-line" th:text="${address.ulice}">Smetanova 337</div>
+        <div class="address-line"><span th:text="${address.psc}">27716</span> <span th:text="${address.obec}">Všetaty</span></div>
+    </div>
+</div>
+</body>
+</html>
